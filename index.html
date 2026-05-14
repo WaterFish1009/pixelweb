@@ -2,21 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pixeling</title>
-  </head>
-  <body>
     <style>
       * {
-        magrin: 0;
+        margin: 0;
         padding: 0;
         box-sizing: border-box;
+        padding-top: 60px;
       }
       .navbar {
         position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         width: 100%;
         height: 50px;
         background-color: #3187A2;
+        top: 0%;
+        left: 0%;
+        z-index: 100;
       } 
       .navbar a {
         color: white;
@@ -34,8 +39,9 @@
         height: 200px;
       }
       .pic1 img {
+        position: absolute;
         width: 50%;
-        height: 50%:
+        height: 50%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -54,16 +60,72 @@
         gap: 10px;
       }
       .Box {
-        background-color: blue;
+        position: relative;
         color: white;
         padding: 30px;
         text-align: center;
+        overflow: hidden;
+      }
+      .Box1 {
+        background-color: red;
+      }
+      .Box2 {
+        background-color: yellow;
+      }
+      .Box3 {
+        background-color: green;
+      }
+      .Box4 {
+        background-color: blue;
+      }
+      .Box img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        left: -100%;
+        transition: 0.5s;
+      }
+      .Box:hover img {
+        left: 0%;
+      }
+      .Box h1 {
+        position: relative;
+        z-index: 2;
       }
       .last {
         background-color: blue;
         width: auto;
         height: 300px;
       }
+      .last h1 {
+        color: #305CDE;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        gap: 2px;
+      }
     </style>
+  </head>
+    <body>
+    <div class="navbar">
+      <h1>PIXEL.COM</h1>
+      <a href="index.html">Home</a>
+      <!--search bar-->
+    </div>
+    <div class="part1">
+      <h1>PIXEL.COM is a website that have 4 games for users to play<br>
+          but unfortunately only 1 game currently available right now.
+      </h1>
+      <div class="pic1">
+       <!-- <img src=""> -->
+      </div>
+      <div class="BoxArea">
+        
+      </div>
+      <div class="last">
+        <h1>THANKS FOR USING THE WEBSITE</h1>
+      </div>
+    </div>
   </body>
 </html>
